@@ -113,7 +113,7 @@
                     
                     grpBtnConver.style.visibility = 'hidden';
                     btnBplay.style.visibility = 'visible';
-                    divDialog.textContent="Te deseo la mejor de la suerte, la clave es recordar :) ";
+                    divDialog.textContent="Te deseo la mejor de la suerte ";
                     btnBplay.addEventListener('click',BeginPlay);
                 }
               
@@ -134,6 +134,6 @@
             
             //Se llama a la funciónen click de boton Seguir
             btnSeguir.addEventListener('click',avanzarDialgo);
-
+            btnSaltar.addEventListener('click',BeginPlay);
 
            //--------------------------Fin lógica board------------------------------------------//
