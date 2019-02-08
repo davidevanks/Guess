@@ -31,7 +31,7 @@
                 lowOrHi.textContent = '';
                 setGameOver();
             } else if (guessCount === 3) {
-                lastResult.textContent = '!!!GAME OVER!!!';
+                lastResult.textContent = '!!!GAME OVER!!! '+'El número era: '+ randomNumber;
                 setGameOver();
             } else {
                 lastResult.textContent = 'Equivocado, no es el número. Trata de nuevo!';
