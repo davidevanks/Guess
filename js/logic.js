@@ -108,12 +108,12 @@
                    // setInterval(animacion, 200);
                    btnSeguir.className="btn btn-success intermitente";
                    //Una vez que se acaba la conversación, escondemos botones del dialogo y mostramos boton de inicio del juego
-                } else if(tabulador===3)
+                } else if(tabulador===4)
                 {
                     
                     grpBtnConver.style.visibility = 'hidden';
                     btnBplay.style.visibility = 'visible';
-                    divDialog.textContent="Te deseo la mejor de la suerte humano!!!!!!! ";
+                    divDialog.textContent="Aqui tienes una prueba: Sabes de que estan hecho la casa de los diseñadores?.....DE ADOBE XD .Te deseo la mejor de la suerte humano!!!!!!! ";
                     btnBplay.addEventListener('click',BeginPlay);
                 }
               
