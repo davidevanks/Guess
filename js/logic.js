@@ -54,7 +54,7 @@
             guessSubmit.disabled = true;
             resetButton = document.createElement('button');
             resetButton.textContent = 'Iniciar nuevo juego';
-            document.body.appendChild(resetButton).className="btn btn-primary";
+            document.querySelector('#divEnviarAdiv').appendChild(resetButton).className="btn btn-primary";
             resetButton.addEventListener('click', resetGame);
         }
         function resetGame() {
