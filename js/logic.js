@@ -37,9 +37,9 @@
                 lastResult.textContent = 'Equivocado, no es el número. Trata de nuevo!';
                 lastResult.style.backgroundColor = 'red';
                 if (userGuess < randomNumber) {
-                    lowOrHi.textContent = 'Last guess was too low!';
+                    lowOrHi.textContent = 'Número muy pequeño!';
                 } else if (userGuess > randomNumber) {
-                    lowOrHi.textContent = 'Last guess was too high!';
+                    lowOrHi.textContent = 'Número muy alto!';
                 }
             }
 
@@ -78,10 +78,10 @@
            //-----------------------------Lógica board-------------------------------------------//
            
            //Array contiene las conversaciones del personaje 
-           let boxConversations=['Lorem ipsum dolor sit amet consectetur adipiscing elit'
-                                 ,'imperdiet ullamcorper eget fames habitant',
-                                 'acilisis torquent cubilia vitae penatibus',
-                                 'molestie sem torquent morbi massa tincidunt, cum gravida '];
+           let boxConversations=['Hola, me llamo acertijo...'
+                                 ,'Se lo que estas pensando, que diseño mas malo. Lo se, aqui entre nos a mi amo le hacen falta unas clases de diseño web....',
+                                 'Pero como sea, no le digas nada, no quiero hacerlo sentir mal. Mejor hablemos del juego...',
+                                 'Tendras que adivinar el número aleatorio, si pierdes te condeno a escuchar los chistes de mi creador, que ya te digo, no son mejor que este diseño >:V.. '];
             //Caja donde se muestra el dialogo
             let grpBtnConver=document.querySelector('#grpBtnConversations');
             let divDialog=document.querySelector('#txtDialogo');
@@ -113,7 +113,7 @@
                     
                     grpBtnConver.style.visibility = 'hidden';
                     btnBplay.style.visibility = 'visible';
-                    divDialog.textContent="Te deseo la mejor de la suerte ";
+                    divDialog.textContent="Te deseo la mejor de la suerte humano!!!!!!! ";
                     btnBplay.addEventListener('click',BeginPlay);
                 }
               
