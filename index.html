@@ -26,7 +26,8 @@
         padding: 3px;
       }
       .imagen {
-
+        
+  
   border-radius: 70%;
 }
 @keyframes slidein {
@@ -44,8 +45,28 @@
   animation-name: slidein;
   animation-iteration-count: infinite;
   animation-direction: alternate;
+
+
+  display: flex;
+  justify-content: center;
+
 }
 
+.intermitente{
+
+  animation: infinite resplandorAnimation 2s;
+  
+}
+@keyframes resplandorAnimation {
+  0%,100%{
+    background-color: #5cb85c;
+  }
+  50%{
+    background-color: darkgreen;
+  
+  }
+
+}
 
     </style>
 
@@ -58,26 +79,43 @@
         <div class="container">
 
             <div class="row">
-          <!--Board Dialogo-->
-                <div id="divImage" class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
                     <br>
-                    <img class="imagen" src="img/acertijo.png">
+                  
+          <!--Board Dialogo-->
+          <div id="BoardDialogo">
+                <div id="divImage"  class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                   
+                    <img  class="imagen" src="img/acertijo.png">
                 </div>
-                <br>
+              
                 <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-    
-                    <div id="txtDialogo" class="alert alert-info" role="alert"> Lorem ipsum dolor sit amet consectetur adipiscing elit, lacus nulla potenti suscipit felis habitasse, aptent leo vestibulum odio himenaeos vehicula. 
+                        <br>
+                        
+                    <div id="txtDialogo" class="alert alert-info" role="alert">  
                     </div>
                 </div>
     
-                <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                <div class="btn-group btn-group-justified" id="grpBtnConversations" role="group" aria-label="...">
     
-                    <div class="btn-group" role="group">
+                    <div class="btn-group btnSeguirr" role="group">
                         <button type="button" id="btnSeguir" class="btn btn-success"><strong>Seguir</strong></button>
                     </div>
                     <div class="btn-group" id="btnSaltar" role="group">
                         <button type="button" class="btn btn-danger">Saltar intro</button>
                     </div>
+
+                
+                </div>
+
+                <div class="btn-group btn-group-justified" id="grpBtnDialoguePlay" role="group" aria-label="...">
+    
+                        <div class="btn-group" id="btnBeginPlay" role="group">
+                                <button type="button" class="btn btn-warning">Iniciar Juego</button>
+                            </div>
+    
+                    
+                    </div>
+
                 </div>
      <!--Fin Dialogo-->
     
@@ -88,13 +126,20 @@
                 <div id="DisplayPlay" class=".col-xs-12 .col-sm-6 .col-md-8">
     
                     <h1>Adivina el número</h1>
-                    <p>We have selected a random number between 1 and 100. See if you can guess it in 10 turns or fewer.
-                        We'll tell you if your guess was too high or too low.</p>
+                   
     
-                    <div class="form">
-                        <label for="guessField">Enter a guess: </label><input type="text" id="guessField" class="guessField">
-                        <input type="submit" value="Enviar adivinanza" class="btn btn-success guessSubmit">
-                    </div>
+                  
+                        <label for="guessField">Ingresa número: </label><input type="text" id="guessField" class="guessField">
+                      
+                        <br>
+                        <br>
+                        <div class="btn-group btn-group-justified" id="grpBtnDialoguePlay" role="group" aria-label="...">
+                                <div class="btn-group" role="group">
+                                        <input type="submit" value="Enviar adivinanza" class="btn btn-success guessSubmit">
+                                    </div>
+            
+                            
+                            </div>
     
                     <div class="resultParas">
                         <p class="guesses"></p>
@@ -112,6 +157,6 @@
     
     </main>
 
-
+<script src="js/logic.js"></script>>
   </body>
 </html>
